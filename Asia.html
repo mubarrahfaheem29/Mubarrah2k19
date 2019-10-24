@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+background:url("world.png") center no-repeat ; 
+background-size:cover; 
+}
+
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+    background-image:linear-gradient(to right,pink,blue,lightblue);
+}
+
+/* Style the top navigation bar */
+
+.topnav {
+	width:80%;
+	height:100px;
+	margin:0px auto;
+	float:right;
+}
+
+.topnav ul{
+	padding:0px;
+	display:flex;
+	background-color:gray;
+}
+
+.topnav ul li{
+	list-style:none;
+	text-decoration:none;
+	display:block;
+	margin:10px 0;
+	padding:10px 20px;
+	position: relative;
+}
+
+.topnav ul li a
+{
+	text-decoration:none;
+	color:red;
+	display:block;
+}
+
+.topnav ul li ul
+{
+	display:none;
+}
+
+.topnav ul li:hover > ul
+{
+display:block;
+}
+
+.topnav ul ul 
+{
+	position:absolute;
+	padding:0px;
+	left:0;
+	top: 100%;
+	display: none;
+	
+	
+}
+
+.topnav ul ul ul 
+{
+	
+	left:100%;
+	top:0;
+	display:none;
+}
+
+/* Change color on hover */
+
+
+  .topnav ul li :hover {
+  background-color:#ddd;
+  color:black;
+  opacity:0.9;
+  }
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  height:100%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+  height: 100%;
+ 
+
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+position:fixed;
+margin-top:30px;
+width:
+100%;
+  background-image:linear-gradient(to right,pink,blue,lightblue);
+  padding: 10px;
+  text-align: center;
+}
+.
+</style>
+</head>
+<body>
+
+
+<div class="header">
+  <h1 style="color:pink;">My WORLD</h1>
+  
+</div>
+
+<div class="topnav">  
+  <ul>
+	<li> Asia
+		<ul>
+		<li> China </li>
+		<li> Bangladesh </li>
+		<li> Srilanka </li>
+		<li> Japan </li>
+		<li> India 
+			<ul>
+				<li> Andra Pradesh </li> 
+				<li> Goa </li> 
+				<li> Karnataka 
+					<ul>
+						<li> Raichur </li> 
+						<li> Kalaburagi </li> 
+						<li> Bidar </li> 
+					</ul> 
+				</li>
+			</ul>
+		</li>
+		</ul>
+	</li>
+	<li> Africa 
+	    <ul>
+        <li> Algeria </li>
+		<li> Egypt </li>
+		<li> South Africa
+		    <ul>
+		        <li> Cape Town </li>
+		        <li> Durban </li>
+		    </ul>
+		</li>
+	    </ul>
+	</li>
+	<li> Europe 
+	     <ul>
+	     <li> Russia </li>
+	     <li> Germany </li>
+	     <li> Italy </li>
+	     <li> Turkey 
+	         <ul>
+	            <li> Istanbul </li>
+	            <li> Ankara </li>
+	         </ul>
+	    </li>
+	    </ul>
+	</li>
+	</ul>
+  
+
+  
+  
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Asia</h2>
+    <p> Asia is the world's largest continent of the seven continents in size and population
+Asia covers one-third of earth's surface
+It has 30 per cent of world land area and 60 per cent of population
+It contains the world's largest country, Russia, and the world's two most populous countries, China and India
+Asia houses the highest point on earth - the summit of Mount Everest, which is 29,028 ft. (8,848 m) tall
+The continent is home to the 10 highest peaks in the world</p>
+<img src="asiaimg.jpg" width="200px">
+  </div>
+  
+  <div class="column middle">
+    <h2>Africa</h2>
+    <p>The continents terrain was inhabitable and remained unknown for thousands of years, earning it the name of 'Dark Continent'
+The world's longest river -- the Nile -- and the world's largest desert -- the Sahara -- both are home in Africa
+The world's hottest place -- Ethiopia -- is in Africa
+The equator passes through the middle of the Dark Continent and it receives direct sunlight throughout the year</p>
+   <img src="africamap.gif" width="200px">
+  </div>
+  
+  <div class="column side">
+    <h2>Europe</h2>
+    <p>Europe and Asia are parts of the same major landmass -- Europe is separated from Asia by the Ural mountains and the Caspian Sea
+The highest mountain in this continent is Mt. Elbrus
+The Balkan ranges, Pyrenees, Apennines, Cantabrian, and the Dinaric Alps are some of the major mountains in Europe
+Europe is surrounded by water on three sides -- Mediterranean Sea in the south, Atlantic Ocean in the west, and Arctic Ocean in the north
+The world's smallest country, the Vatican City, is in Europe</p>
+<img src="europemap.gif" width="200px">
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+
+</div>
+  
+</body>
+</html>
